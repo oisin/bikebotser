@@ -1,3 +1,5 @@
+*Public Health Warning:  work in progress, not even working proper*
+
 ### A little bot for checking bike availability with Slack
 
 Bikebotser needs to know your local bike scheme, and your Slack access tokens, and your JC Decaux developer tokens.
