@@ -13,7 +13,7 @@ end
 require 'rack/test'
 require 'minitest/autorun'
 require 'webmock/minitest'
-require_relative '../bikebotser'
+require_relative '../server'
 
 module Helpers
   def token
@@ -22,6 +22,10 @@ module Helpers
 
   def team
     'test_team'
+  end
+
+  def user_name
+    'mickey'
   end
 
   # token team_id channel_id channel_name timestamp user_id user_name text
@@ -33,7 +37,7 @@ module Helpers
       channel_name: 'default',
       timestamp:    Time.now.utc.to_s,
       user_id:      '0',
-      user_name:    'mickey',
+      user_name:    user_name,
       text:         text,
       trigger:      'bikes'
     }
