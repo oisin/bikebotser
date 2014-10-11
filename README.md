@@ -1,4 +1,13 @@
-*Public Health Warning:  work in progress, not even working proper*
+
+|Public Health Warning|
+|:-:|
+|This is a work in progress, it's not even doing what it is meant to yet!
+|**DO NOT USE**
+
+[![Dependency Status](https://gemnasium.com/oisin/bikebotser.svg)](https://gemnasium.com/oisin/bikebotser)
+[![Build Status](https://travis-ci.org/oisin/bikebotser.svg)](https://travis-ci.org/oisin/bikebotser)
+[![Coverage Status](https://coveralls.io/repos/oisin/bikebotser/badge.png)](https://coveralls.io/r/oisin/bikebotser)
+
 
 ### A little bot for checking bike availability with Slack
 
