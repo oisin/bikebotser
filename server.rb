@@ -1,13 +1,13 @@
 require 'sinatra'
-require_relative 'lib/botstuff'
+require_relative 'lib/bot'
 
-class BikeBotser < Sinatra::Base
+class Server < Sinatra::Base
   set :show_exceptions, true
 
-  helpers BotStuff
+  helpers Bot
 
   post '/' do
-    BotStuff.bot.handle_item(params)
+    Bot.bot.handle_item(params)
   end
 
   get '/status' do

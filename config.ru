@@ -1,7 +1,7 @@
 $: << File.dirname(__FILE__)
 
-require 'bikebotser'
+require 'server'
 
 map '/' do
-  run BikeBotser
+  run Server
 end

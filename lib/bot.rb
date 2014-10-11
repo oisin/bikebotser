@@ -1,6 +1,6 @@
 require  'slackbotsy'
 
-module BotStuff
+module Bot
 
   def self.help
     "free <station>   - show number of free bikes at station\n" +
@@ -23,7 +23,7 @@ module BotStuff
   end
 
   def self.bot
-    Slackbotsy::Bot.new(BotStuff.config) do
+    Slackbotsy::Bot.new(Bot.config) do
       hear /free\s+([0-9]+)/ do |matched|
         "I don't know what is free at station #{matched[1]}"
       end
@@ -33,19 +33,19 @@ module BotStuff
       end
 
       hear /fave(.*)/ do
-        BotStuff.sorry('faves', user_name)
+        Bot.sorry('faves', user_name)
       end
 
       hear /commute(.*)/ do
-        BotStuff.sorry('commutes', user_name)
+        Bot.sorry('commutes', user_name)
       end
 
       hear /scrub(.*)/ do
-        BotStuff.sorry('scrub', user_name)
+        Bot.sorry('scrub', user_name)
       end
 
       hear /help|wat|wtf|\?+/ do
-        BotStuff.help
+        Bot.help
       end
     end
   end
