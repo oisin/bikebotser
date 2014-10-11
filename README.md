@@ -6,8 +6,7 @@
 
 [![Dependency Status](https://gemnasium.com/oisin/bikebotser.svg)](https://gemnasium.com/oisin/bikebotser)
 [![Build Status](https://travis-ci.org/oisin/bikebotser.svg)](https://travis-ci.org/oisin/bikebotser)
-[![Coverage Status](https://coveralls.io/repos/oisin/bikebotser/badge.png)](https://coveralls.io/r/oisin/bikebotser)
-
+[![Coverage Status](https://coveralls.io/repos/oisin/bikebotser/badge.png?branch=master)](https://coveralls.io/r/oisin/bikebotser?branch=master)
 
 ### A little bot for checking bike availability with Slack
 
