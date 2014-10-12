@@ -16,11 +16,11 @@ require 'webmock/minitest'
 require_relative '../server'
 
 module Helpers
-  def token
-    'test_outgoing_token'
+  def slack_token_out
+    ENV['SLACK_TOKEN_OUT']
   end
 
-  def team
+  def slack_team
     'test_team'
   end
 
@@ -31,8 +31,8 @@ module Helpers
   # token team_id channel_id channel_name timestamp user_id user_name text
   def payload(text)
     {
-      token:        token,
-      team_id:      team,
+      token:        slack_token_out,
+      team_id:      slack_team,
       channel_id:   '0',
       channel_name: 'default',
       timestamp:    Time.now.utc.to_s,
@@ -41,6 +41,14 @@ module Helpers
       text:         text,
       trigger:      'bikes'
     }
+  end
+
+  def bike_station(bikes=10, stands=10, number=222)
+    Hashie::Mash.new({
+      available_bikes: bikes,
+      available_bike_stands: stands,
+      number: number
+    })
   end
 
   def app

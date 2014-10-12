@@ -1,4 +1,5 @@
-require  'slackbotsy'
+require 'slackbotsy'
+require 'bikes'
 
 module Bot
 
@@ -12,9 +13,22 @@ module Bot
     "#{cmd.capitalize} not implemented at this time, sorry #{user.capitalize}!"
   end
 
+  def self.bike_token
+    ENV['DECAUX_TOKEN']
+  end
+
+  def self.bike_scheme
+    ENV['BIKEBOTSER_SCHEME'] || 'Dublin'
+  end
+
+  def self.station(num)
+    Bikes.new(Bot.bike_token, Bot.bike_scheme).station(num)
+  end
+
   def self.config
+    enforce_mandatory_env
     {
-      'team'           => ENV['SLACK_TEAM'] || 'bikebotser',
+      'team'           => ENV['SLACK_TEAM'],
       'channel'        => ENV['SLACK_CHANNEL'] || '#default',
       'incoming_token' => ENV['SLACK_TOKEN_IN'],
       'outgoing_token' => ENV['SLACK_TOKEN_OUT'],
@@ -22,14 +36,28 @@ module Bot
     }
   end
 
+  def self.enforce_mandatory_env
+    %w{ DECAUX_TOKEN SLACK_TOKEN_IN SLACK_TOKEN_OUT SLACK_TEAM }.each { |var|
+      ENV[var] || (raise ArgumentError.new("Required ENV key #{var} missing"))
+    }
+  end
+
+  def self.bikes_free_message(n)
+    "#{n} bikes available"
+  end
+
+  def self.slots_free_message(n)
+    "#{n} slots available"
+  end
+
   def self.bot
     Slackbotsy::Bot.new(Bot.config) do
       hear /free\s+([0-9]+)/ do |matched|
-        "I don't know what is free at station #{matched[1]}"
+        Bot.bikes_free_message(Bot.station(matched[1]).available_bikes)
       end
 
       hear /slots\s+([0-9]+)/ do |matched|
-        "I don't know how many slots available at station #{matched[1]}"
+        Bot.slots_free_message(Bot.station(matched[1]).available_bike_stands)
       end
 
       hear /fave(.*)/ do

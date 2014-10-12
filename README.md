@@ -26,21 +26,20 @@ BIKEBOTSER_NAME | *bikebotser* | name that the bot will use in your channel
 BIKEBOTSER_SCHEME | *Dublin* | the Decaux 'contract' that you are using
 
 
-
-    free <station number | station name>
+    free <station>
 
 Tell me how many bikes are available at a station.
 
-    fave <station number | station name> <name>
+    fave <station> <name>
 
 Add a favourite station, then you can use any of the commands that take a station number or
 name without any argument and it will use your faves.
 
-    slots <station number | station name>
+    slots <station>
 
 Tell me how many bike slots are available at the station
 
-    commute <station number | station name> <station number | station name> <name>
+    commute <station number> <station number> <name>
 
     commute <name>
 

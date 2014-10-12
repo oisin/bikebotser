@@ -2,6 +2,15 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
+    bikes (0.0.2)
+      hashie (~> 3.3, >= 3.3.1)
+      httparty (~> 0.13, >= 0.13.1)
+      json (~> 1.8, >= 1.8.1)
+    byebug (3.5.1)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+      slop (~> 3.6)
+    columnize (0.8.9)
     coveralls (0.7.1)
       multi_json (~> 1.3)
       rest-client
@@ -11,12 +20,18 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     daemons (1.1.9)
+    debugger-linecache (1.2.0)
     docile (1.1.5)
     eventmachine (1.0.3)
+    hashie (3.3.1)
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     json (1.8.1)
     mime-types (2.4.1)
     minitest (5.4.2)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     netrc (0.7.7)
     rack (1.5.2)
     rack-protection (1.5.3)
@@ -40,6 +55,7 @@ GEM
     slackbotsy (0.2.1)
       json
       sinatra
+    slop (3.6.0)
     term-ansicolor (1.3.0)
       tins (~> 1.0)
     thin (1.6.3)
@@ -57,6 +73,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bikes (>= 0.0.2)
+  byebug (~> 3.5, >= 3.5.1)
   coveralls (~> 0.7, >= 0.7.1)
   minitest (~> 5.4, >= 5.4.2)
   rack-test (~> 0.6, >= 0.6.2)
