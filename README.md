@@ -73,3 +73,8 @@ You'll need Slack and JC Decaux tokens. Instructions for getting them are on the
 You need to host this bot somewhere, and it's up to you how you want to do that. Heroku is an
 easy option, as is Engine Yard, AppFog. Digital Ocean, Linode and EC2 are also good. Or you can
 host it on an in-house server, once it can receive webhook calls from Slack.
+
+### Attributions
+
+Bicycle logo designed by [Shahed Syed](http://www.thenounproject.com/dehahs) from
+the [Noun Project](http://www.thenounproject.com)

@@ -1,0 +1,13 @@
+{
+  "name": "Bikebotser",
+  "description": "Slack Concierge for JC Decaux bike schemes.",
+  "keywords": [
+    "bikes",
+    "slack",
+    "bot"
+  ],
+  "website": "https://github.com/oisin/bikebotser",
+  "repository": "https://github.com/oisin/bikebotser",
+  "logo": "https://github.com/oisin/bikebotser/tree/master/images/logo.svg",
+  "success_url": "/welcome"
+}
