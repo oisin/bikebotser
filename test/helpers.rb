@@ -13,7 +13,7 @@ end
 require 'rack/test'
 require 'minitest/autorun'
 require 'webmock/minitest'
-require_relative '../server'
+require_relative '../bot_server'
 
 module Helpers
   def slack_token_out

@@ -5,6 +5,9 @@ gem 'sinatra', '~> 1.4', '>= 1.4.4'
 gem 'thin', '~> 1.6', '>= 1.6.3', platforms: [:mri, :ruby]
 gem 'rake', '~> 10.3', '>= 10.3.2'
 gem 'bikes', '>= 0.0.2'
+gem 'haml', '~> 4.0', '>= 4.0.5'
+gem 'mongo', '~> 1.11', '>= 1.11.1'
+gem 'bson_ext', '~> 1.11', '>= 1.11.1', platforms: [:mri, :ruby]
 
 group :test do
   gem 'rack-test', '~> 0.6', '>= 0.6.2'

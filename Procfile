@@ -1,1 +1,1 @@
-web: bundle exec ruby bikebotser.rb -p $PORT
+web: bundle exec rackup -p $PORT

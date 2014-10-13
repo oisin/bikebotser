@@ -1,6 +1,6 @@
 require_relative 'helpers'
 
-class TestServer < Minitest::Spec
+class TestAdmin < Minitest::Spec
   include Rack::Test::Methods
   include Helpers
 

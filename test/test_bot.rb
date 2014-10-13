@@ -41,7 +41,7 @@ class TestBot < Minitest::Spec
   # Returns a hash of the result
   def say(cmd)
     data = payload("bikes #{cmd}")
-    post '/', data
+    post '/bot', data
     case last_response.status
     when 200, 201
       JSON.parse(last_response.body)

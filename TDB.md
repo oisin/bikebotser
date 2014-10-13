@@ -6,6 +6,33 @@
 
 ----
 
+
+Fiddle with the login
+   the post back to the server should happen
+   split to first_signin and signing
+
+sprockets for the assets perhaps  https://gist.github.com/fmeyer/3610423
+
+single pages stuff - there’s a heap on angular there that could be relevant.
+http://net.tutsplus.com/tutorials/javascript-ajax/building-single-page-web-apps-with-sinatra-part-1/
+
+http://docs.deployd.com/docs/collections/examples/a-simple-todo-app-with-angular.md
+
+http://tutorials.jenkov.com/angularjs/index.html
+
+http://www.toptal.com/angular-js/a-step-by-step-guide-to-your-first-angularjs-app
+
+http://viralpatel.net/blogs/angularjs-introduction-hello-world-tutorial/
+
+https://angularjs.org/
+
+http://tutorialzine.com/2013/08/learn-angularjs-5-examples/
+
+http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating
+
+
+----
+
 On start up and regularly thereafter, pull the static data about the
 stations from the JCD site and deploy the new pieces. Make this
 accessible from the Admin site - reload scheme data, reload station data.
