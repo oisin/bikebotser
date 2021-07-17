@@ -4,10 +4,6 @@
 |This is a work in progress, it's not even doing what it is meant to yet!
 |**DO NOT USE**
 
-[![Dependency Status](https://gemnasium.com/oisin/bikebotser.svg)](https://gemnasium.com/oisin/bikebotser)
-[![Build Status](https://travis-ci.org/oisin/bikebotser.svg)](https://travis-ci.org/oisin/bikebotser)
-[![Coverage Status](https://coveralls.io/repos/oisin/bikebotser/badge.png?branch=master)](https://coveralls.io/r/oisin/bikebotser?branch=master)
-
 ### A little bot for checking bike availability with Slack
 
 Bikebotser needs to know your local bike scheme, and your Slack access tokens, and your JC Decaux developer tokens.

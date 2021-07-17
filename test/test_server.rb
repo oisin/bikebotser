@@ -6,6 +6,6 @@ class TestServer < Minitest::Spec
 
   def test_status
     get '/status'
-    last_response.body.must_equal(Admin.status_msg)
+    _(last_response).body.must_equal(Admin.status_msg)
   end
 end

@@ -52,27 +52,27 @@ module Bot
 
   def self.bot
     Slackbotsy::Bot.new(Bot.config) do
-      hear /free\s+([0-9]+)/ do |matched|
+      hear (/free\s+([0-9]+)/) do |matched|
         Bot.bikes_free_message(Bot.station(matched[1]).available_bikes)
       end
 
-      hear /slots\s+([0-9]+)/ do |matched|
+      hear (/slots\s+([0-9]+)/) do |matched|
         Bot.slots_free_message(Bot.station(matched[1]).available_bike_stands)
       end
 
-      hear /fave(.*)/ do
+      hear (/fave(.*)/) do
         Bot.sorry('faves', user_name)
       end
 
-      hear /commute(.*)/ do
+      hear (/commute(.*)/) do
         Bot.sorry('commutes', user_name)
       end
 
-      hear /scrub(.*)/ do
+      hear (/scrub(.*)/) do
         Bot.sorry('scrub', user_name)
       end
 
-      hear /help|wat|wtf|\?+/ do
+      hear (/help|wat|wtf|\?+/) do
         Bot.help
       end
     end

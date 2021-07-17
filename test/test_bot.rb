@@ -13,28 +13,28 @@ class TestBot < Minitest::Spec
 
   def test_help
     %w{ help wat wtf }.each { |cmd|
-      say(cmd)['text'].must_equal(Bot.help)
+      _(say(cmd)['text']).must_equal(Bot.help)
     }
   end
 
   def test_free_bikes
     station = bike_station
     Bot.stub :station, station do
-      say("free #{station.number}")['text'].must_equal(Bot.bikes_free_message(station.available_bikes))
+      _(say("free #{station.number}")['text']).must_equal(Bot.bikes_free_message(station.available_bikes))
     end
   end
 
   def test_free_slots
     station = bike_station
     Bot.stub :station, station do
-      say("slots #{station.number}")['text'].must_equal(Bot.slots_free_message(station.available_bike_stands))
+      _(say("slots #{station.number}")['text']).must_equal(Bot.slots_free_message(station.available_bike_stands))
     end
   end
 
   # Some of the commands just say sorry
   def test_sorries
     %w{ faves commutes scrub }.each { |cmd|
-      say(cmd)['text'].must_equal(Bot.sorry(cmd, user_name))
+      _(say(cmd)['text']).must_equal(Bot.sorry(cmd, user_name))
     }
   end
 
