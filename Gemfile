@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'slackbotsy', '~> 0.2', '>= 0.2.1'
 gem 'sinatra', '~> 1.4', '>= 1.4.4'
 gem 'thin', '~> 1.6', '>= 1.6.3', platforms: [:mri, :ruby]
-gem 'rake', '~> 10.3', '>= 10.3.2'
+gem 'rake', '~> 12.3'
 gem 'bikes', '>= 0.0.2'
 
 group :test do
