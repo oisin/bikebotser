@@ -1,7 +1,7 @@
 
 |Public Health Warning|
 |:-:|
-|This is a work in progress, it's not even doing what it is meant to yet!
+| Previously, this was a work in progress. Now it's just a historical work. Please consider this project _OBSOLETE_
 |**DO NOT USE**
 
 ### A little bot for checking bike availability with Slack
